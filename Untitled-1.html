@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header-logo {
+            position: relative;
+            width: 980px;
+            height: 55px;
+            margin: auto;
+            background-color: orange;
+        }
+        
+        .logo {
+            display: block;
+            width: 55px;
+            height: 55px;
+            overflow: hidden;
+            background-color: #ff6700;
+            text-align: left;
+            text-indent: -9999em;
+        }
+        
+        .logo::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 55px;
+            height: 55px;
+            transition: all .3s;
+            background: url(./img/mi-logo.png) no-repeat center center;
+            opacity: 1;
+        }
+        
+        .logo::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 55px;
+            height: 55px;
+            transition: all .3s;
+            background: url(./img/mi-home.png) no-repeat center center;
+            margin-left: -55px;
+            opacity: 0;
+        }
+        
+        .logo:hover::before {
+            opacity: 0;
+            margin-left: 55px;
+        }
+        
+        .logo:hover::after {
+            opacity: 1;
+            margin-left: 0;
+        }
+        
+        section {
+            width: 980px;
+            height: 600px;
+            background-color: burlywood;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+        
+        .mi {
+            width: 445px;
+            height: 340px;
+            margin-top: 130px;
+            overflow: hidden;
+            border: 2px solid red;
+            float: left;
+        }
+        
+        .mi img {
+            transition: all 0.2s;
+        }
+        
+        .mi:hover img {
+            transform: scale(1.2);
+        }
+        
+        .chu {
+            width: 250px;
+            height: 170px;
+            border: 1px solid pink;
+            margin: 300px auto;
+            position: relative;
+            float: left;
+        }
+        
+        .chu img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.6s;
+            transform-origin: top right;
+        }
+        
+        .chu:hover img:nth-child(1) {
+            transform: rotate(60deg);
+        }
+        
+        .chu:hover img:nth-child(2) {
+            transform: rotate(120deg);
+        }
+        
+        .chu:hover img:nth-child(3) {
+            transform: rotate(180deg);
+        }
+        
+        .chu:hover img:nth-child(4) {
+            transform: rotate(240deg);
+        }
+        
+        .chu:hover img:nth-child(5) {
+            transform: rotate(300deg);
+        }
+        
+        .chu:hover img:nth-child(6) {
+            transform: rotate(360deg);
+        }
+        
+        article {
+            width: 980px;
+            height: 360px;
+            background-color: rebeccapurple;
+            margin: auto;
+            perspective: 1000px;
+        }
+        
+        article img:nth-child(1) {
+            display: inline-block;
+            margin: 10px;
+            transition: all 1s;
+        }
+        
+        article img:nth-child(1):hover {
+            transform: rotateX(360deg);
+        }
+        
+        article img:nth-child(2) {
+            display: inline-block;
+            padding: 10px;
+            transition: all 5s;
+        }
+        
+        article img:nth-child(2):hover {
+            transform: rotateY(360deg);
+        }
+        
+        article img:nth-child(3) {
+            display: inline-block;
+            padding: 20px;
+            transition: all 5s;
+        }
+        
+        article img:nth-child(3):hover {
+            transform: rotateZ(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-logo">
+        <a href="" class="logo" title="小米官网">小米官网</a>
+    </div>
+    <section>
+        <div class="mi">
+            ，<img src="img/mi.jpg" alt="">
+        </div>
+        <div class="chu">
+            <img src="img/6.jpg" />
+            <img src="img/5.jpg" />
+            <img src="img/4.jpg" />
+            <img src="img/3.jpg" />
+            <img src="img/2.jpg" />
+            <img src="img/1.jpg" />
+        </div>
+    </section>
+    <article>
+        <img src="img/x.jpg">
+        <img src="img/y.png" width="300">
+        <img src="img/z.png" width="200">
+    </article>
+</body>
+
+</html>
